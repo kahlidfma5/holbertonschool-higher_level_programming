@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Module Square """
+"""Module Square"""
 
 
 class Square:
-    """ Create a Square """
+    """Create a Square"""
 
     def __init__(self, size=0):
 
