@@ -4,12 +4,11 @@
 
     Args:
         obj: instance of the class
-
-    Returns:
-        List of attributes
     """
 
 
 def lookup(obj):
-
+""" Returns:
+        List of attributes """
+    
     return dir(obj)
