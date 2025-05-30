@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Module defines an empty BaseGeometry class as a base for geometry-related classes.
+Module defines an empty BaseGeometry class as a base for
+geometry-related classes.
 """
 
 
