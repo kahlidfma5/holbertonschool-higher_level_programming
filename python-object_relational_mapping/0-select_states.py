@@ -3,8 +3,6 @@
 Lists all states from the specified MySQL database.
 Usage: ./0-select_states.py <mysql username> <mysql password> <database name>
 """
-
-
 import sys
 import MySQLdb
 
