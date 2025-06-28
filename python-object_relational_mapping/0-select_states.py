@@ -3,16 +3,11 @@
 Lists all states from the database hbtn_0e_0_usa
 """
 
-
-import sys
 import MySQLdb
+import sys
 
-if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        print("Usage: {} username password database".format(sys.argv[0]))
-        sys.exit(1)
-
-    # Connect to the MySQL database
+if __name__ == "__main__":
+    # Connect to MySQL
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -21,17 +16,14 @@ if __name__ == '__main__':
         db=sys.argv[3]
     )
 
-    # Create a cursor object to execute SQL queries
+    # Create cursor and execute query
     cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
 
-    # Execute the query to get all states ordered by id
-    cur.execute("SELECT * FROM states ORDER BY id ASC;")
-    states = cur.fetchall()
+    # Fetch and print all rows
+    for row in cur.fetchall():
+        print(row)
 
-    # Print each state
-    for state in states:
-        print(state)
-
-    # Clean up
+    # Close cursor and connection
     cur.close()
     db.close()
