@@ -16,12 +16,10 @@ def main():
     )
     cursor = db.cursor()
     cursor.execute("SELECT id, name FROM states ORDER BY id ASC;")
-
     for state in cursor.fetchall():
         print(state)
-
     cursor.close()
     db.close()
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
