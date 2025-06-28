@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""
-Lists all states from the specified MySQL database.
-Usage: ./0-select_states.py <mysql username> <mysql password> <database name>
-"""
 import sys
 import MySQLdb
 
 def main():
     if len(sys.argv) != 4:
         return
-
     user, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
 
     db = MySQLdb.connect(
